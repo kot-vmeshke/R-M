@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root {
+  width: 100%;
+  max-width: 740px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding-top: 100px;
+  margin: 0 auto;
+}
+#search-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+#search-input {
+  width: 50%;
+  height: 30px;
+  background-color: #ebebeb;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  color: darkgray;
+}
+#search-input:focus {
+  outline: none;
+}
+#search-btn,
+.load-more {
+  height: 30px;
+  background-color: #ff7b00;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  color: white;
+  cursor: pointer;
+}
+.load-more {
+  display: none;
+  margin-bottom: 50px;
+}
+#characters-wrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
+}
+.character {
+  width: 140px;
+  height: 140px;
+  background: lightgrey;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-delete {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  background: white;
+  opacity: 0.7;
+  cursor: pointer;
+  position: relative;
+}
+.btn-delete::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 12px;
+  top: calc(50% - 6px);
+  left: calc(50% - 0.5px);
+  transform: rotate(45deg);
+  background-color: #7e7e7e;
+}
+.btn-delete::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 12px;
+  top: calc(50% - 6px);
+  left: calc(50% - 0.5px);
+  transform: rotate(-45deg);
+  background-color: #7e7e7e;
+}
+.btn-delete:hover {
+  opacity: 1;
+}
